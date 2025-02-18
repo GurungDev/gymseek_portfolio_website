@@ -12,7 +12,6 @@ export const Header = () => {
 
   const lastScrollY = useRef(0); // Ref to persist last scroll position
 
- 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -73,7 +72,8 @@ export const Header = () => {
             <Link href="#contact" className="text-light hover:text-highlight">
               Contact
             </Link>
-
+          </nav>
+          <div className="hidden md:flex  flex gap-4 items-center">
             <a
               href="https://gymseek-gym-panel.vercel.app/login"
               className="text-light hover:text-highlight"
@@ -82,11 +82,11 @@ export const Header = () => {
             </a>
             <a
               href="https://gymseek-gym-panel.vercel.app/register"
-              className="text-light hover:text-highlight"
+              className="text-light hover:bg-blue-600 bg-highlight p-2 px-5 rounded-full"
             >
               Sign Up
             </a>
-          </nav>
+          </div>
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="text-light">
               <BiMenu size={24} />
@@ -96,37 +96,40 @@ export const Header = () => {
         {isOpen && (
           <div className="md:hidden bg-primary py-4 px-10 rounded-md">
             <div className="flex flex-col space-y-4  ">
-            <Link href="#home" className="text-light hover:text-highlight">
-              Home
-            </Link>
-            <Link href="#features" className="text-light hover:text-highlight">
-              Features
-            </Link>
-            <Link href="#pricing" className="text-light hover:text-highlight">
-              Pricing
-            </Link>
-            <Link
-              href="#testimonials"
-              className="text-light hover:text-highlight"
-            >
-              Testimonials
-            </Link>
-            <Link href="#contact" className="text-light hover:text-highlight">
-              Contact
-            </Link>
+              <Link href="#home" className="text-light hover:text-highlight">
+                Home
+              </Link>
+              <Link
+                href="#features"
+                className="text-light hover:text-highlight"
+              >
+                Features
+              </Link>
+              <Link href="#pricing" className="text-light hover:text-highlight">
+                Pricing
+              </Link>
+              <Link
+                href="#testimonials"
+                className="text-light hover:text-highlight"
+              >
+                Testimonials
+              </Link>
+              <Link href="#contact" className="text-light hover:text-highlight">
+                Contact
+              </Link>
 
-            <a
-              href="https://gymseek-gym-panel.vercel.app/login"
-              className="text-light hover:text-highlight"
-            >
-              login
-            </a>
-            <a
-              href="https://gymseek-gym-panel.vercel.app/register"
-              className="text-light hover:text-highlight"
-            >
-              Sign Up
-            </a>
+              <a
+                href="https://gymseek-gym-panel.vercel.app/login"
+                className="text-light hover:text-highlight"
+              >
+                login
+              </a>
+              <a
+                href="https://gymseek-gym-panel.vercel.app/register"
+                className="text-light hover:text-highlight"
+              >
+                Sign Up
+              </a>
             </div>
           </div>
         )}
