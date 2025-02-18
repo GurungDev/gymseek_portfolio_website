@@ -95,7 +95,7 @@ export const Header = () => {
         </div>
         {isOpen && (
           <div className="md:hidden bg-primary py-4 px-10 rounded-md">
-            <div className="flex flex-col space-y-4 ">
+            <div className="flex flex-col space-y-4  ">
             <Link href="#home" className="text-light hover:text-highlight">
               Home
             </Link>

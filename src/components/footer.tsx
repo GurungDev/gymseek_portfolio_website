@@ -20,7 +20,7 @@ export default function Footer() {
             <div className="flex">
               <nav>
                 <h4 className=" text-light  font-semibold mb-4">Quick Links</h4>
-                <div className="  flex gap-3">
+                <div className="  flex gap-3 flex-wrap">
                   <Link
                     href="#home"
                     className="text-light hover:text-highlight"
